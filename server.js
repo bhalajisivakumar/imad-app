@@ -12,7 +12,7 @@ var articles = {
     date : 'Aug 11,2017',
     content :   `
         <p>
-               Content for my file article one......     Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......  
+               CONTENT for my file article one......     Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......  
                
         </p>
         <p>
