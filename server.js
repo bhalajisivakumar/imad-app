@@ -41,6 +41,15 @@ var articles = {
               article three content
         </p>`
        
+   },
+   'article-four' : {
+       title : 'article four | bhalaji sivakumar',
+       date : 'aug 14,2017',
+       heading : 'Article-four',
+       content : `
+            <p>
+            article 4 content
+            </p>`
    }
     };
 function createTemplate (data){
