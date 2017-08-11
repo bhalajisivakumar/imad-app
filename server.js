@@ -23,10 +23,10 @@ var articles = {
         </p>`
 },
    'article-two' : {
-       title:'Article Two | Bhalaji Sivakumar',
-    heading: 'Article Two',
-    date: 'Aug 12,2017',
-    content:   `
+            title:'Article Two | Bhalaji Sivakumar',
+            heading: 'Article Two',
+            date: 'Aug 12,2017',
+            content:   `
         <p>
             article 2 content
         </p>`
@@ -54,7 +54,7 @@ var htmlTemplate= `
       <title>
            ${title}
        </title>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="viewport" content="width = device-width,initial-scale=1" />
        <link href="/ui/style.css" rel="stylesheet" />
     </head>
 <body>
