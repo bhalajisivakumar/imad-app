@@ -49,7 +49,12 @@ var articles = {
        content : `
             <p>
             article 4 content
-            </p>`
+            </p>`,
+        hello : `
+            <h2> 
+                Hello ive added hello with $ sign 
+            </h2> `
+            
    }
     };
 function createTemplate (data){
@@ -57,6 +62,7 @@ function createTemplate (data){
     var date = data.date;
     var content = data.content;
     var heading = data.heading;
+    var hello = data.hello;
 var htmlTemplate= `
 <html>
    <head>
@@ -80,6 +86,9 @@ var htmlTemplate= `
     </div>
     <div>
           ${content} 
+    </div>
+    <div>
+          ${hello}
     </div>
     </div>
 </body>
