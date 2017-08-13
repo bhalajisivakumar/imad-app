@@ -1,5 +1,5 @@
 console.log('Loaded!');
-document.getElementById('main-text'
+var element = document.getElementById('main-text'
 );
 element.innerHTML = 'NEW VALUE';
 var img = document.getElementById('madi');
