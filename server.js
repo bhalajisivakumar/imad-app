@@ -108,6 +108,18 @@ app.get('/counter', function(req,res) {
    res.send(counter.toString());
 });
 
+
+var names = [];
+app.get('/submit-name/:name', function(req,res) {
+   res.sendFile(path.join(__dirname,'ul','madi.png'));
+   //get the name formthe rwqust objext
+   var name = req.query.name;
+   names.push(name);
+   //JSON Javascript object notation
+    res.send(JSON.stringify(names));
+    
+});
+
 app.get('/:articleName',function(req,res) {
     var articleName = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
@@ -125,16 +137,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-var names = [];
-app.get('/submit-name/:name', function(req,res) {
-   res.sendFile(path.join(__dirname,'ul','madi.png'));
-   //get the name formthe rwqust objext
-   var name = req.query.name;
-   names.push(name);
-   //JSON Javascript object notation
-    res.send(JSON.stringify(names));
-    
-});
+
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
