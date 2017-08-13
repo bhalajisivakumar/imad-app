@@ -114,10 +114,10 @@ app.get('/submit-name/:name', function(req,res) {
    res.sendFile(path.join(__dirname,'ul','madi.png'));
    //get the name formthe rwqust objext
    var name = req.query.name;
+   
    names.push(name);
    //JSON Javascript object notation
     res.send(JSON.stringify(names));
-    
 });
 
 app.get('/:articleName',function(req,res) {
