@@ -131,7 +131,7 @@ app.get('/submit-name',function(req,res) { //url:  /submit-name?name-xxxxx
 
 // /////// COMMENTS //////////////////////////////////////
 
-var comments=[];
+
 
 
 // /////// ARTICLE PAGE////////////////////////////////////
