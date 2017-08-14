@@ -82,7 +82,7 @@
         for(var j = 0 ; j < comments.length ; j++) {
         clist += '<li>' + comments[j] + '</li>'; 
         }
-        var ul = getElementById('commentList');
+        var ul = document.getElementById('commentList');
         ul.innerHTML = clist;
         }
         }
