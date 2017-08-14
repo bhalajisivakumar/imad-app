@@ -131,7 +131,12 @@ app.get('/submit-name',function(req,res) { //url:  /submit-name?name-xxxxx
 
 // /////// COMMENTS //////////////////////////////////////
 
-
+var comments=[];
+app.get('/submit-comment',function(req,res) {
+    var comment = req.query.comment;
+    comments.push[comment];
+    res.send(JSON.stringtify(comments));
+});
 
 
 // /////// ARTICLE PAGE////////////////////////////////////
