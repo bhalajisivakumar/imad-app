@@ -50,12 +50,7 @@ var articles = {
        content : `
             <p>
             article 4 content
-            </p>`,
-        hello : `
-            <h2> 
-                Hello ive added hello with $ sign 
-            </h2> `
-            
+            </p>`
       }
     
 };
@@ -90,9 +85,7 @@ var htmlTemplate= `
     <div>
           ${content} 
     </div>
-    <div>
-          ${hello}
-    </div>
+  
     </div>
 </body>
 
@@ -135,7 +128,7 @@ app.get('/:articleName',function(req,res) {
 
 app.get('/:articleName',function() {
    var commentList = document.getElementById('commentList');
-    res.send(commentList); 
+    res.send(commentList.value); 
 });
 // ///////////////// style.css //////////////////////////////
 
