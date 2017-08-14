@@ -130,8 +130,12 @@ var comments=[];
 app.get('/:articleName',function(req,res) {
     var articleName = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
-    var commentList = document.getElementById('commentList');
-    res.send(commentList.value);
+    
+});
+
+app.get('/:articleName',function() {
+   var commentList = document.getElementById('commentList');
+    res.send(commentList); 
 });
 // ///////////////// style.css //////////////////////////////
 
