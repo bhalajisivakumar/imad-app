@@ -131,7 +131,7 @@ app.get('/:articleName',function(req,res) {
     var articleName = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
     varcommentList = document.getElementById('commentList');
-    res.send(commentList);
+    res.send('commentList');
 });
 // ///////////////// style.css //////////////////////////////
 
