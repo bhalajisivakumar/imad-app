@@ -82,6 +82,8 @@
         for(var j=0;j<clist.length;j++) {
         clist+=    '<li>' + comments[j] + '</li>'; 
         }
+        var ul = getElementById('commentList');
+        ul.innerHTML = clist;
         }
         }
         
