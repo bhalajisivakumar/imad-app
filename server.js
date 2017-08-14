@@ -9,7 +9,7 @@ var articles = {
     'articles' : {
         title :'Articles | Bhalaji Sivakumar',
         heading : 'Articles',
-        date : 'Aug 14,2017',
+        date : 'Aug 14,2017'
         
 },
    'article-one' : {
