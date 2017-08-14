@@ -11,15 +11,7 @@ var articles = {
         heading : 'Articles',
         date : 'Aug 14,2017',
         content : `
-        <ul id = "commentList">
-            <li>comment1</li>
-            <li>comment2</li>
-            <li>comment3</li> 
-        </ul> ` ,
-        comment:   `
-      <input type = "text" placeholder = "comments" id = "comment"></input>
-        <input type = "submit" value = "submit" id = "submitButton"></input>
-                `
+        
 },
    'article-one' : {
     title :'Article One | Bhalaji Sivakumar',
