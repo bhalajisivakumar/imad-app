@@ -23,8 +23,7 @@ button.onclick = function () {
 };
 //submit name
 
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var submit = document.getElementById('submit_btn');
 
 submit.onclick = function () {
@@ -50,6 +49,8 @@ submit.onclick = function () {
     //Render the variable in a corect span
         };
      //make the request 
+     var nameInput = document.getElementById('name');
+    var name = nameInput.value; 
      request.open('GET','http://balajisk1996.imad.hasura-app.io/submit-name?name=' + name', true);
      request.send(null);
      //capture a list of namwes
