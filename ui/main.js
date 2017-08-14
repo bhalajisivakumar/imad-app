@@ -21,21 +21,23 @@ button.onclick = function () {
      request.open('GET','http://balajisk1996.imad.hasura-app.io/counter',true);
      request.send(null);
 };
-//submit name
-
-        
-        var submit = document.getElementById('submit_btn');
-
-    submit.onclick = function () {
-    //make a request to the serverand send the name capture the list of names and render the list.
-    //create a request to the counter endpoint
-    var request = new XMLHttpRequest();
-    
-    //Capture the reponse and store it ina variable
-    request.onreadystatechange = function () {
-        if (request.readyState === XMLHttpRequest.DONE) {
-        //TAKE SOME ACTION
-        if(request.status === 200) {
+// /////////////////////////////////////////////////////////////////////
+            //submit name
+            
+            var submit = document.getElementById('submit_btn');
+            submit.onclick = function () {
+            //make a request to the serverand send the name capture the list of names and render the list.
+            
+            //create a request object
+            
+            var request = new XMLHttpRequest();
+            
+            //Capture the reponse and store it ina variable
+            
+            request.onreadystatechange = function () {
+            if (request.readyState === XMLHttpRequest.DONE) {
+            //TAKE SOME ACTION
+            if(request.status === 200) {
             var names = request.responseText;
             names = JSON.parse(names);
             var list = ' ';
@@ -55,4 +57,29 @@ button.onclick = function () {
      request.send(null);
      //capture a list of namwes
     };
+// //////////////////////////////////////////////////////////////
+    //SUBMIT COMMENT
+    
+    var submit2 = document.getElementById('submitButton');
+    
+    //after cloicking it should display the comments
+    
+     submit2.onclick = function() {
+         
+         //create a request object
+            
+            var request = new XMLHttpRequest();
+            
+            //Capture the reponse and store it ina variable
+            
+            request.onreadystatechange = function () {
+            if (request.readyState === XMLHttpRequest.DONE) {
+            //TAKE SOME ACTION
+            if(request.status === 200) {
+                var counter = request.responseText;
+            }
+            }
+                
+     };
 
+};
