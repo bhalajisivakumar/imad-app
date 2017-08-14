@@ -131,9 +131,6 @@ app.get('/:articleName',function(req,res) {
     var articleName = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
     varcommentList = document.getElementById('commentList');
-    <li>comment1</li>
-    <li>comment2</li>
-    <li>comment3</li>
     res.send(commentList);
 });
 // ///////////////// style.css //////////////////////////////
