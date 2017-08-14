@@ -23,7 +23,7 @@ var articles = {
         </p>`
         
         //add a comments box
-        <input type = "text" placeholder="comments"></input>
+        <input type = "text" placeholder = "comments"></input>
 },
    'article-two' : {
             title:'Article Two | Bhalaji Sivakumar',
