@@ -15,7 +15,11 @@ var articles = {
             <li>comment1</li>
             <li>comment2</li>
             <li>comment3</li> 
-        </ul> `
+        </ul> ` ,
+        comment:   `
+      <input type = "text" placeholder = "comments" id = "comment"></input>
+        <input type = "submit" value = "submit" id = "submitButton"></input>
+                `
 },
    'article-one' : {
     title :'Article One | Bhalaji Sivakumar',
@@ -31,7 +35,11 @@ var articles = {
         </p>
         <p>
              Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......  
-        </p>`
+        </p>` ,
+        comment:   `
+      <input type = "text" placeholder = "comments" id = "comment"></input>
+        <input type = "submit" value = "submit" id = "submitButton"></input>
+                `
        
 },
    'article-two' : {
@@ -41,8 +49,11 @@ var articles = {
             content:   `
         <p>
             article 2 content
-        </p>`
-       
+        </p>    `     ,
+        comment:   `
+      <input type = "text" placeholder = "comments" id = "comment"></input>
+        <input type = "submit" value = "submit" id = "submitButton"></input>
+                `
 },
    'article-three' : { 
        title:'Article three | Bhalaji Sivakumar',
@@ -51,17 +62,11 @@ var articles = {
     content:   `
         <p>
               article three content
-        </p>`
-       
-},
-   'article-four' : {
-       title : 'article four | bhalaji sivakumar',
-       date : 'aug 14,2017',
-       heading : 'Article-four',
-       content : `
-            <p>
-            article 4 content
-            </p>`
+        </p>`,
+     comment:   `
+      <input type = "text" placeholder = "comments" id = "comment"></input>
+        <input type = "submit" value = "submit" id = "submitButton"></input>
+                `
       }
     
 };
@@ -71,7 +76,7 @@ function createTemplate (data) {
     var date = data.date;
     var content = data.content;
     var heading = data.heading;
-    var hello = data.hello;
+    var comment = data.comment;
 var htmlTemplate= `
 <html>
    <head>
@@ -96,7 +101,10 @@ var htmlTemplate= `
     <div>
           ${content} 
     </div>
-  
+  <div>
+  <hr/>
+          $(comment)
+  </div>
     </div>
 </body>
 
