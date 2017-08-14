@@ -6,6 +6,17 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
+    'articles' : {
+        title :'Articles | Bhalaji Sivakumar',
+        heading : 'Articles',
+        date : 'Aug 14,2017',
+        content : `
+        <ul id = "commentList">
+            <li>comment1</li>
+            <li>comment2</li>
+            <li>comment3</li> 
+        </ul> `
+},
    'article-one' : {
     title :'Article One | Bhalaji Sivakumar',
     heading : 'Article One',
