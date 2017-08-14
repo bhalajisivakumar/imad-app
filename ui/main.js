@@ -95,7 +95,7 @@
         /* make the request
         when a request is made then perform the above steps */
         
-        request.open('GET', 'http://balajisk1996.imad.hasura-app.io/submit-comment?comment='+ name ,true);
+        request.open('GET', 'http://balajisk1996.imad.hasura-app.io/submit-comment?comment='+ comment ,true);
         request.send(null);
         // after sending this the top steps are execute when server status is true
         };
