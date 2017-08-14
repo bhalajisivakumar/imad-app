@@ -79,7 +79,7 @@
         comments = JSON.parse(comments);
         //render
         var clist = ' ';
-        for(var j = 0 ; j < clist.length ; j++) {
+        for(var j = 0 ; j < comments.length ; j++) {
         clist += '<li>' + comments[j] + '</li>'; 
         }
         var ul = getElementById('commentList');
