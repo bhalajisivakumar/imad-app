@@ -11,7 +11,9 @@ var articles = {
         heading : 'Articles',
         date : 'Aug 14,2017',
         content : `
-        
+        <div>
+        <ul id = "commentList>
+        </ul>
         `
 },
    'article-one' : {
@@ -59,6 +61,7 @@ var articles = {
      comment:   `
       <input type = "text" placeholder = "comments" id = "comment"></input>
         <input type = "submit" value = "submit" id = "submitButton"></input>
+        
                 `
       }
     
