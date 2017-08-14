@@ -143,13 +143,10 @@ app.get('/:articleName',function(req,res) {
     
 });
 
-app.get('/:articleName',function() {
-   var commentList = document.getElementById('commentList');
-    res.send(commentList.value); 
-});
+
 // /////////////articles///////////////////////////////////////
 var comments=[];
-app.get('/submit2-comment', function(req,res) {
+app.get('/submit-comment', function(req,res) {
     var comment = req.query.comment;
     comments.push[comment];
     res.send(JSON.stringtify(comments));
