@@ -27,7 +27,7 @@ button.onclick = function () {
         var name = nameInput.value; 
         var submit = document.getElementById('submit_btn');
 
-submit.onclick = function () {
+    submit.onclick = function () {
     //make a request to the serverand send the name capture the list of names and render the list.
     //create a request to the counter endpoint
     var request = new XMLHttpRequest();
@@ -44,15 +44,14 @@ submit.onclick = function () {
             list += '<li>' + names[i] + '</li>';
             }
             var ul = document.getElementById('namelist');
-   ul.innerHTML = list;
+            ul.innerHTML = list;
         }
     }
     //Render the variable in a corect span
         };
      //make the request 
-    
      request.open('GET','http://balajisk1996.imad.hasura-app.io/submit-name?name=' + name', true);
      request.send(null);
      //capture a list of namwes
-}
+    };
 
