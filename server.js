@@ -21,9 +21,7 @@ var articles = {
         <p>
              Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......  
         </p>`
-        
-        //add a comments box
-        <input type = "text" placeholder = "comments"></input>
+       
 },
    'article-two' : {
             title:'Article Two | Bhalaji Sivakumar',
@@ -93,6 +91,9 @@ var htmlTemplate= `
     <div>
           ${hello}
     </div>
+     
+        //add a comments box
+        <input type = "text" placeholder = "comments"></input>
     </div>
 </body>
 
