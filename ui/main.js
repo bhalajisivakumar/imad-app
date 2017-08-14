@@ -58,6 +58,8 @@
                 request.send(null);
                 //capture a list of namwes
                 };
+                
+               
 // //////////////////////////////////////////////////////////////
     //SUBMIT COMMENT
 
@@ -71,10 +73,15 @@
         if (request.readyState === XMLHttpRequest.DONE) {
         //TAKE SOME ACTION
         if(request.status === 200) {
+            // if the request is successful
         // captured and stored on a variable
         var comments = request.responseText;
-        // render
-        
+        comments = JSON.parse(comments);
+        //render
+        var clist = ' ';
+        for(var j=0;j<clist.length;j++) {
+        clist+=    '<li>' + comments[j] + '</li>'; 
+        }
         }
         }
         
