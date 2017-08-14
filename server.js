@@ -32,7 +32,7 @@ var articles = {
             article 2 content
         </p>`
        
-   },
+},
    'article-three' : { 
        title:'Article three | Bhalaji Sivakumar',
     heading: 'Article three',
@@ -42,7 +42,7 @@ var articles = {
               article three content
         </p>`
        
-   },
+},
    'article-four' : {
        title : 'article four | bhalaji sivakumar',
        date : 'aug 14,2017',
@@ -56,8 +56,10 @@ var articles = {
                 Hello ive added hello with $ sign 
             </h2> `
             
-   }
-    };
+      }
+    
+};
+    // ///////////////////function create template//////////
 function createTemplate (data) {
     var title = data.title;
     var date = data.date;
@@ -91,10 +93,6 @@ var htmlTemplate= `
     <div>
           ${hello}
     </div>
-     
-        
-        <input type = "text" placeholder = "comments" id = "comments"></input>
-        <input type = "submit" value = "submit" id = "submitButton"></input>
     </div>
 </body>
 
@@ -102,17 +100,17 @@ var htmlTemplate= `
 `;
 return htmlTemplate;
 }
-// INDEX.HTML ////////////////////
+///////////// INDEX.HTML ///////////////////////////////////////
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-// /////////// COUNTER ////////////////////
+// /////////// COUNTER ///////////////////////////////////
 var counter = 0;
 app.get('/counter', function(req,res) {
    counter = counter +1; 
    res.send(counter.toString());
 });
-// //////////// NAME ///////////////
+// //////////// NAME ////////////////////////////////////
 
 var names=[];
 app.get('/submit-name',function(req,res) { //url:  /submit-name?name-xxxxx
@@ -121,21 +119,33 @@ app.get('/submit-name',function(req,res) { //url:  /submit-name?name-xxxxx
     res.send(JSON.stringify(names));
 });
 
-// ////////////////////
+// /////// COMMENTS //////////////////////////////////////
+
+var comments=[];
+
+
+// /////// ARTICLE PAGE////////////////////////////////////
+// when the request is rendered it must be executed in the articlename page
 
 app.get('/:articleName',function(req,res) {
     var articleName = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
+    varcommentList = document.getElementById('commentList');
+    <li>comment1</li>
+    <li>comment2</li>
+    <li>comment3</li>
+    res.send(commentList);
 });
+// ///////////////// style.css //////////////////////////////
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
-
+// //////// / main.js ////////////////////////////////////////
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
-
+// /////////// madi image //////////////////////////////////////
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
