@@ -103,7 +103,7 @@ var htmlTemplate= `
     </div>
   <div>
   <hr/>
-          $(comment)
+          ${comment}
   </div>
     </div>
 </body>
