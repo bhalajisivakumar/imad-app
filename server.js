@@ -10,8 +10,9 @@ var articles = {
         title :'Articles | Bhalaji Sivakumar',
         heading : 'Articles',
         date : 'Aug 14,2017',
+        content : `
         
-        
+        `
 },
    'article-one' : {
     title :'Article One | Bhalaji Sivakumar',
@@ -104,6 +105,8 @@ var htmlTemplate= `
 `;
 return htmlTemplate;
 }
+
+
 ///////////// INDEX.HTML ///////////////////////////////////////
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -140,6 +143,11 @@ app.get('/:articleName',function(req,res) {
 app.get('/:articleName',function() {
    var commentList = document.getElementById('commentList');
     res.send(commentList.value); 
+});
+// /////////////articles///////////////////////////////////////
+
+app.get('/:articles',function() {
+    
 });
 // ///////////////// style.css //////////////////////////////
 
