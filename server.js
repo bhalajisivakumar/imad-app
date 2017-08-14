@@ -94,7 +94,7 @@ var htmlTemplate= `
      
         
         <input type = "text" placeholder = "comments"></input>
-        <input type = "submit" value="submit"></input>
+        <input type = "submit" value = "submit"></input>
     </div>
 </body>
 
