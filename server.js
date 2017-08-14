@@ -148,9 +148,11 @@ app.get('/:articleName',function() {
     res.send(commentList.value); 
 });
 // /////////////articles///////////////////////////////////////
-
-app.get('/:articles',function() {
-    
+var comments=[];
+app.get('/submit-comment',function(req,res) {
+    var comment = req.query.comment;
+    comments.push[comment];
+    res.send(JSON.stringtify(comments));
 });
 // ///////////////// style.css //////////////////////////////
 
