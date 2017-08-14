@@ -63,9 +63,9 @@
 // //////////////////////////////////////////////////////////////
     //SUBMIT COMMENT
 
-        var submit = document.getElementById('submitButton');
+        var submit2 = document.getElementById('submitButton');
         //after cloicking it should display the comments
-        submit.onclick = function() {
+        submit2.onclick = function() {
         //create a request object
         var request = new XMLHttpRequest();
         //Capture the reponse and store it ina variable
