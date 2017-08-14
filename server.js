@@ -93,8 +93,8 @@ var htmlTemplate= `
     </div>
      
         
-        <input type = "text" placeholder = "comments"></input>
-        <input type = "submit" value = "submit"></input>
+        <input type = "text" placeholder = "comments" id = "comments"></input>
+        <input type = "submit" value = "submit" id = "submitButton"></input>
     </div>
 </body>
 
