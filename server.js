@@ -10,11 +10,7 @@ var articles = {
         title :'Articles | Bhalaji Sivakumar',
         heading : 'Articles',
         date : 'Aug 14,2017',
-        content : `
-        <div>
-        <ul id = "commentList>
-        </ul>
-        `
+        
 },
    'article-one' : {
     title :'Article One | Bhalaji Sivakumar',
@@ -31,10 +27,7 @@ var articles = {
         <p>
              Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......  
         </p>` ,
-        comment:   `
-      <input type = "text" placeholder = "comments" id = "comment"></input>
-        <input type = "submit" value = "submit" id = "submitButton"></input>
-                `
+        
        
 },
    'article-two' : {
@@ -45,10 +38,7 @@ var articles = {
         <p>
             article 2 content
         </p>    `     ,
-        comment:   `
-      <input type = "text" placeholder = "comments" id = "comment"></input>
-        <input type = "submit" value = "submit" id = "submitButton"></input>
-                `
+      
 },
    'article-three' : { 
        title:'Article three | Bhalaji Sivakumar',
@@ -57,12 +47,8 @@ var articles = {
     content:   `
         <p>
               article three content
-        </p>`,
-     comment:   `
-      <input type = "text" placeholder = "comments" id = "comment"></input>
-        <input type = "submit" value = "submit" id = "submitButton"></input>
-        
-                `
+        </p>`
+    
       }
     
 };
@@ -97,10 +83,7 @@ var htmlTemplate= `
     <div>
           ${content} 
     </div>
-  <div>
-  <hr/>
-          ${comment}
-  </div>
+ 
     </div>
 </body>
 
