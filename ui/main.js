@@ -63,9 +63,9 @@
 // //////////////////////////////////////////////////////////////
     //SUBMIT COMMENT
 
-        var submit2 = document.getElementById('submitButton');
+        var submit = document.getElementById('submitButton');
         //after cloicking it should display the comments
-        submit2.onclick = function() {
+        submit.onclick = function() {
         //create a request object
         var request = new XMLHttpRequest();
         //Capture the reponse and store it ina variable
@@ -82,8 +82,8 @@
         for(var j = 0 ; j < comments.length ; j++) {
         clist += '<li>' + comments[j] + '</li>'; 
         }
-        var ull = document.getElementById('commentList');
-        ull.innerHTML = clist;
+        var ul = document.getElementById('commentList');
+        ul.innerHTML = clist;
         }
         }
         
