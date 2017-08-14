@@ -92,7 +92,7 @@ var htmlTemplate= `
           ${hello}
     </div>
      
-        //add a comments box
+        
         <input type = "text" placeholder = "comments"></input>
     </div>
 </body>
