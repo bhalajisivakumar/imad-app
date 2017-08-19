@@ -14,53 +14,7 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-var articles = {
-    'articles' : {
-        title :'Articles | Bhalaji Sivakumar',
-        heading : 'Articles',
-        date : 'Aug 14,2017'
-        
-},
-   'article-one' : {
-    title :'Article One | Bhalaji Sivakumar',
-    heading : 'Article One',
-    date : 'Aug 11,2017',
-    content :   `
-        <p>
-               CONTENT for my file article one......     Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......  
-               
-        </p>
-        <p>
-             Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......  
-        </p>
-        <p>
-             Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......   Content for my file article one......  
-        </p>` ,
-        
-       
-},
-   'article-two' : {
-            title:'Article Two | Bhalaji Sivakumar',
-            heading: 'Article Two',
-            date: 'Aug 12,2017',
-            content:   `
-        <p>
-            article 2 content
-        </p>    `     ,
-      
-},
-   'article-three' : { 
-       title:'Article three | Bhalaji Sivakumar',
-    heading: 'Article three',
-    date: 'Aug 13,2017',
-    content:   `
-        <p>
-              article three content
-        </p>`
-    
-      }
-    
-};
+
     // ///////////////////function create template//////////
 function createTemplate (data) {
     var title = data.title;
