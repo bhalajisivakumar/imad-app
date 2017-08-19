@@ -8,7 +8,7 @@ var config = {
     database : 'balajisk1996',
     host : 'db.imad.hasura-app.io',
     port : '5432',
-    password : process.env.db-balajisk1996-76751
+    password : 'db-balajisk1996-76751'
 };
 
 var app = express();
