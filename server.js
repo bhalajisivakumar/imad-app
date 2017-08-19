@@ -147,7 +147,7 @@ app.get('/submit-name',function(req,res) { //url:  /submit-name?name-xxxxx
 // /////// ARTICLE PAGE////////////////////////////////////
 // when the request is rendered it must be executed in the articlename page
 
-app.get('/:articleName',function(req,res) {
+app.get('/articles/:articleName',function(req,res) {
     var articleName = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
     
