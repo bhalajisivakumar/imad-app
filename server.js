@@ -87,7 +87,7 @@ var htmlTemplate= `
           ${heading}
        </h3>
     <div>
-          ${date}
+          ${date.toDateString}
     </div>
     <div>
           ${content} 
@@ -138,10 +138,6 @@ app.get('/submit-name',function(req,res) { //url:  /submit-name?name-xxxxx
    names.push(name);
     res.send(JSON.stringify(names));
 });
-
-// /////// COMMENTS //////////////////////////////////////
-
-
 
 
 // /////// ARTICLE PAGE////////////////////////////////////
