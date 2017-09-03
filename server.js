@@ -4,6 +4,7 @@ var path = require('path');
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var config = {
     user : 'balajisk1996',
@@ -15,6 +16,11 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(
+    session({
+        secret: 'someRandomSecretValue',
+        cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
+    }));
 
 
     // ///////////////////function create template//////////
@@ -121,7 +127,8 @@ app.post('/login', function(req,res) {
              var hashedPassword = hash(password, salt); //Creating a hash based on the password submitted and the orgnl salt
              if (hashedPassword === dbString) {
           
-              
+              // set a session
+              req.session.auth = {userId: result.rows[0].id};
               ///////////////////////
                res.send('credentials correct!');
           } else {
@@ -134,7 +141,14 @@ app.post('/login', function(req,res) {
    }); 
 });
 // ////////// db /////////
-
+app.get('/check-login', function (req, res) {
+   if (req.session && req.session.auth && req.session.auth.userId) {
+       res.send('User logged in:' + req.session.auth.userId.toString());
+       
+   } else {
+       res.send('User not logged in');
+   }
+});
 // make arequest
 var pool = new Pool(config);
 app.get('/test-db', function(req,res) {
@@ -189,7 +203,9 @@ pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName],fu
 });
 
 
-
+app.get('/logout', function (req, res) {
+    
+});
 
 // ///////////////// style.css //////////////////////////////
 
