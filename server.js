@@ -236,3 +236,11 @@ var port = 80;
 app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
+/* ///////////////////////
+
+
+check out the source code at 
+  "https:github.com/coco98/imad-2016-app
+  SQL SCHEMA:
+  Github - coco98 - schema.sql
+  "*/
