@@ -121,6 +121,9 @@ app.post('/login', function(req,res) {
              var hashedPassword = hash(password, salt); //Creating a hash based on the password submitted and the orgnl salt
              if (hashedPassword === dbString) {
               res.send('credentials correct!');
+              
+              //set a session  
+              
           } else {
               res.semd(403).send('username/password is invalid');
           }
